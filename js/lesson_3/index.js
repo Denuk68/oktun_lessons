@@ -88,3 +88,33 @@
 // }
 // let res = createArray(10, 100);
 // console.log(res);
+
+// 7) Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
+
+// let arr = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+// let nameKeyFunc = function(array){
+//     let newArr = [];
+//     for( let item of array ){
+//         for(let key in item){
+//            newArr.push(key)
+//         }
+//     }
+//     return newArr
+// }
+// let res = nameKeyFunc(arr);
+// console.log(res);
+
+// 8) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+
+// let arr = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+// let nameKeyFunc = function(array){
+//     let newArr = [];
+//     for( let item of array ){
+//         for(let key in item){
+//            newArr.push(item[key])
+//         }
+//     }
+//     return newArr
+// }
+// let res = nameKeyFunc(arr);
+// console.log(res);
