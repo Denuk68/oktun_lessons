@@ -289,3 +289,57 @@
 // let res = funcRElement(-1, 12, 2, 3, 4, 5, 6, 7, 8, 9, 10, -2);
 // console.log(res)
 
+
+// 26 створити функцію яка  створює блок з текстом. Текст задати через аргумент
+// let text = prompt("Введіть текс", "Текст");
+// let createDivText = function (text) {
+//     document.write(`<div> ${text} </div>`);
+// }
+// createDivText(text)
+
+// 27 Створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+// let text = prompt("Введіть текс", "Текст");
+// let createDivText = function (text) {
+//     document.write(`<ul>`)
+//     for (let i = 0; i < 3; i++) {
+//         document.write(`<li> ${text} </li>`);        
+//     }
+//     document.write(`</ul>`)
+
+// }
+// createDivText(text)
+
+// 28 - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+// let text = prompt("Введіть текс", "Текст");
+// let count = prompt("Введіть count", 1);
+// let createDivText = function (text,count) {
+//     document.write(`<ul>`)
+//     for (let i = 0; i < count; i++) {
+//         document.write(`<li> ${text} </li>`);        
+//     }
+//     document.write(`</ul>`)
+// }
+// createDivText(text, count)
+
+// 29 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+// let arr = [1, "ok", true];
+// let createDivText = function (array) {
+//     document.write(`<ul>`)
+//     for (let item of array) {
+//         document.write(`<li> ${item} </li>`)
+//     }
+//     document.write(`</ul>`)
+// }
+// createDivText(arr)
+
+// 30 - створити функцію яка обчислює та повертає площу кола
+// let Pi = 3.14;
+// let radius = prompt("Enter radius")
+// let mathFunc = (pi, a) => {
+//     let S = pi * a**2
+//     return S     
+// }
+// res = mathFunc(Pi, radius);
+// console.log(res)
