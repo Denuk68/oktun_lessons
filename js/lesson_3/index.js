@@ -78,13 +78,13 @@
 
 // 6) створити функцію яка заповнює масив рандомними числами
 
-// let createArray = function (count, maxNumber){   
-//     let arr = []; 
+// let createArray = function (count, maxNumber){
+//     let arr = [];
 //     for(let i = 0; i < count ; i++){
 //         let randomNumber = Math.round(Math.random()*maxNumber);
 //         arr.push(randomNumber)
 //     }
-//     return arr;     
+//     return arr;
 // }
 // let res = createArray(10, 100);
 // console.log(res);
@@ -163,7 +163,7 @@
 
 // 15 Дан масив [1, 2, 3, 4, 5]. Перетворіть масив в [1,2].
 // let arr = [1, 2, 3, 4, 5];
-// arr.splice(2,5);
+// arr.splice(2,3);
 // console.log(arr)
 
 // 16 Дан масив [1, 2, 3, 4, 5]. Зробіть з нього масив [1, 2, 3, 'a', 'b', 'c'].
@@ -203,7 +203,7 @@
 // }
 // console.log(word);
 
-// 20 За допомогою циклу for of зібрати всі букви в слово.    
+// 20 За допомогою циклу for of зібрати всі букви в слово.
 
 // let arr = ['a', 'b', 'c'];
 // let word = "";
@@ -225,9 +225,46 @@
 
 // 22 функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"  EXAMPLE:  foo([9,8,0,4], ) // ==> [ 8, 9, 0, 4 ]  foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]  foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 
-let funFunction = function (arg1, arg2) {
+// let funFunction = function (array, number) {
 
-}
+//     for (let i = 0; i < array.length; i++) {
+//         let nextNumb ;
+//         if (i == number) {
+//             nextNumb = array[i];
+//             array[i] = array[i + 1];
+//             array[i + 1] = nextNumb;
+//         }
+//     };
+//     return array;
+// }
+// let res = funFunction([9, 8, 0, 4], 5);
+// console.log(res);
 
-let res = funFunction([9, 8, 0, 4], 1);
-console.log(res);
+
+// 23  Дано список імен. let n1 = '    Harry       Potter      ' let n2 = '    Ron       Whisley      ' let n3 = '    Hermione       Granger      '  Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд.
+// let n1 = '    Harry       Potter      ';
+// let n2 = '    Ron       Whisley      ';
+// let n3 = '    Hermione       Granger      ';
+
+// let validateName = function (words) {
+//    let newWord = words.replace(/ +/g, ' ').trim();
+//    return newWord;
+// }
+// let res = validateName(n1);
+// console.log(res);
+
+// 24 Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень. Двожина масиву від 2 до 100; [1,0,6,0,3] => [1,6,3,0,0]
+
+// let arr1 = [1, 0, 6, 0, 3];
+// let zeroFunc = function (arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === 0) {
+//             let saveNumb = arr[i];
+//             arr.splice(i, 1)
+//             arr.push(saveNumb)
+//         }
+//     }
+//     return arr
+// }
+// let res = zeroFunc(arr1);
+// console.log(res);
