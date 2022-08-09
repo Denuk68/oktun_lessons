@@ -268,3 +268,24 @@
 // }
 // let res = zeroFunc(arr1);
 // console.log(res);
+
+// 25) створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+
+// function funcRElement() {
+//     let min = arguments[0];
+//     let max = arguments[0];
+//     for (let numb of arguments) {
+//         if (numb > max) {
+//             max = numb;
+//         }
+//         else if (numb < max && numb < min) {
+//             min = numb;
+//         }
+//     }
+//     console.log("console.log(max) =>", max);
+//     return min;
+// };
+
+// let res = funcRElement(-1, 12, 2, 3, 4, 5, 6, 7, 8, 9, 10, -2);
+// console.log(res)
+
