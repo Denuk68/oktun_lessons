@@ -1,4 +1,4 @@
-// HomeWork
+// //HomeWork
 //  створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
 
 
@@ -120,3 +120,40 @@
 // })
 
 // console.log(sort)
+
+
+
+// //Classwork
+
+
+// - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів) створити пустий масив, наповнити його 10 об'єктами Client Взяти масив (Client []).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+// let clients = [];
+
+// class Client {
+//     constructor(id, name, surname, email, phone, order) {
+//         this.id = id;
+//         this.name = name;
+//         this.surname = surname;
+//         this.email = email;
+//         this.phone = phone;
+//         this.order = order;
+
+//         clients.push(this);
+//     }
+// }
+
+// let client = new Client(1, "Yurii", "Biliy", "mail", +3809821221, 1000);
+// let client2 = new Client(2, "Yurii", "Biliy", "mail", +3809821221, 200);
+// let client3 = new Client(3, "Yurii", "Biliy", "mail", +3809821221, 100);
+// let client4 = new Client(4, "Yurii", "Biliy", "mail", +3809821221, 700);
+// let client5 = new Client(5, "Yurii", "Biliy", "mail", +3809821221, 400);
+// let client6 = new Client(6, "Yurii", "Biliy", "mail", +3809821221, 500);
+// let client7 = new Client(7, "Yurii", "Biliy", "mail", +3809821221, 150);
+
+// let sortClients = clients.sort((a, b) => {
+//     return a.order - b.order
+// })
+// for (let i of sortClients) {
+//     document.write(" id:" + i.id + " order:" + i.order + "</br>")
+// }
