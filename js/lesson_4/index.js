@@ -157,3 +157,25 @@
 // for (let i of sortClients) {
 //     document.write(" id:" + i.id + " order:" + i.order + "</br>")
 // }
+
+
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:-- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"  -- info () - яка виводить всю інформацію про автомобіль -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed -- changeYear (newValue) - змінює рік випуску на значення -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+
+
+// function Car(model, maker, year, maxSpeed, engine) {
+//     this.model = model;
+//     this.maker = maker;
+//     this.year = year;
+//     this.maxSpeed = maxSpeed;
+//     this.engine = engine;
+
+//     this.drive = function () { console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`) };
+
+//     this.info = function () { console.log(`Виробник: ${this.maker}, модель: ${this.model}, рік випсуку:  ${this.year}, максимальна швидкість: ${this.maxSpeed}, об'єм: ${this.engine} `) };
+// }
+
+
+
+// let car1 = new Car("Model X", "Tesla", 2015, 250, 2.0);
+// car1.drive();
+// car1.info();
