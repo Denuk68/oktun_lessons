@@ -385,3 +385,51 @@
 // let user = new createUser(1, "Leanne Graham", "Bret", "Sincere@april.biz", "Kulas Light",
 //     "Apt. 556", "Gwenborough", "92998-3874", -37.3159, 81.1496, "1-770-736-8031 x56442", "hildegard.org", "Romaguera-Crona", "Multi-layered client-server neural-net", "harness real-time e-markets");
 // console.log(user);
+
+// ==============================================
+// -  Створити функцію конструктор / клас  який описує об'єкт тегу
+// Поля :
+//  -назва тегу ()
+//  - опис його дій
+//  - масив з атрибутами (2-3 атрибути максимум)
+//  Кожен атрибут описати як окремий який буде містити
+//  -назву атрибуту
+//  -опис дії атрибуту
+//  інформацію брати з htmlbook.ru
+
+//  Таким чином описати теги
+//  -a
+//  -div
+//  -h1
+//  -span
+//  -input
+//  -form
+//  -option
+//  -select
+//  Приклад результуючого об'єкту
+//    {
+//         titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//         attrs: [
+//         {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//         {/*some props and values*/},
+//         {/*...*/},
+//         {/*...*/},
+//         ]
+
+//    }
+// ==============================================
+
+// class InfoTeg {
+//     constructor(titleOfTag, action, titleOfAttr, actionOfAttr) {
+//         this.titleOfTag = titleOfTag;
+//         this.action = action;
+//         this.attrs = [];
+//         this.attrs.titleOfAttr = titleOfAttr;
+//         this.attrs.actionOfAttr = actionOfAttr;
+//     }
+// };
+
+// let div = new InfoTeg("div", "Елемент <div> є блоковим елементом і призначений для виділення фрагмента документа з метою зміни виду вмісту.", "title", "Вказує додаткову текстову підказку");
+
+// console.log(div)
