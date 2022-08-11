@@ -215,3 +215,55 @@
 // car1.changeYear(2020);
 // car1.addDriver({ name: "Den", age: 24 })
 
+
+
+// ==============================================
+// - (Те саме, тільки через клас)
+// Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+//     -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+//     -- info () - яка виводить всю інформацію про автомобіль
+//     -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+//     -- changeYear (newValue) - змінює рік випуску на значення newValue
+//     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// ==============================================
+
+class Car {
+    constructor(model, maker, year, maxSpeed, engine) {
+        this.model = model;
+        this.maker = maker;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engine = engine;
+
+        this.drive = function () {
+            console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+        };
+
+        this.info = function () {
+            return console.log(`Виробник: ${this.maker}, модель: ${this.model}, рік випсуку:  ${this.year}, максимальна швидкість: ${this.maxSpeed}, об'єм: ${this.engine} `);
+        };
+
+        this.increaseMaxSpeed = function (newSpeed) {
+            this.maxSpeed += newSpeed;
+            console.log(`Нова максимальна швидкість: ${this.maxSpeed}`);
+        };
+
+        this.changeYear = function (newYear) {
+            this.year = newYear;
+            console.log(`Новий рік випсуку:  ${this.year},`)
+        };
+
+        this.addDriver = function (driver) {
+            this.driver = driver;
+            console.log(this)
+        }
+    }
+
+};
+
+let car1 = new Car("Model X", "Tesla", 2015, 250, 2.0);
+car1.drive();
+car1.info();
+car1.increaseMaxSpeed(100);
+car1.changeYear(2018);
+car1.addDriver({ name: "Den", age: 24 });
