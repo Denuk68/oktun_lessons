@@ -86,8 +86,13 @@
 // })
 // console.log(map);
 
+
+// ==============================================
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone створити пустий масив, наповнити його 10 об'єктами new User(....) Взяти масив цей  User[] та: Відфільтрувати , залишивши тільки об'єкти з парними id (filter) та Відсортувати його по id. по зростанню (sort)
+// ==============================================
+
 // let users = [];
+
 // function User(id, name, surname, email, phone) {
 //     this.id = id;
 //     this.name = name;
@@ -98,18 +103,21 @@
 //     users.push(this);
 // }
 
-// let user1 = new User(8, 'den', "name", "den@gmail.com", "+38096000000");
-// let user2 = new User(4, 'sasha', "name", "@gmail.com", "+38096000000");
-// let user3 = new User(5, 'vlad', "name", "@gmail.com", "+38096000000");
-// let user4 = new User(6, 'stas', "name", "@gmail.com", "+38096000000");
-// let user5 = new User(7, 'andriy', "name", "@gmail.com", "+38096000000");
-// let user6 = new User(1, 'valik', "name", "@gmail.com", "+38096000000");
-// let user7 = new User(2, 'sharik', "name", "@gmail.com", "+38096000000");
-// let user8 = new User(9, 'yarik', "name", "@gmail.com", "+38096000000");
-// let user9 = new User(10, 'yurii', "name", "@gmail.com", "+38096000000");
-// let user10 = new User(3, 'artem', "name", "@gmail.com", "+38096000000");
+// let arr = [
+//     new User(8, 'den', "name", "den@gmail.com", "+38096000000"),
+//     new User(4, 'sasha', "name", "@gmail.com", "+38096000000"),
+//     new User(5, 'vlad', "name", "@gmail.com", "+38096000000"),
+//     new User(6, 'stas', "name", "@gmail.com", "+38096000000"),
+//     new User(7, 'andriy', "name", "@gmail.com", "+38096000000"),
+//     new User(1, 'valik', "name", "@gmail.com", "+38096000000"),
+//     new User(2, 'sharik', "name", "@gmail.com", "+38096000000"),
+//     new User(9, 'yarik', "name", "@gmail.com", "+38096000000"),
+//     new User(10, 'yurii', "name", "@gmail.com", "+38096000000"),
+//     new User(3, 'artem', "name", "@gmail.com", "+38096000000"),
+// ];
 
 // // let filter = users.filter((item) => item.id % 2 === 0); Коли немає тіла функції, (тобто 1 строка, то можна писати без return та квадратних скобок)
+
 // let filter = users.filter((item) => {  // <---- стрелочна ф-ція
 //     return item.id % 2 === 0
 // });
@@ -126,7 +134,9 @@
 // //Classwork
 
 
-// - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів) створити пустий масив, наповнити його 10 об'єктами Client Взяти масив (Client []).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+// ==============================================
+// - Cтворити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів) створити пустий масив, наповнити його 10 об'єктами Client Взяти масив (Client []).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+// ==============================================
 
 // let clients = [];
 
@@ -142,14 +152,15 @@
 //         clients.push(this);
 //     }
 // }
-
-// let client = new Client(1, "Yurii", "Biliy", "mail", +3809821221, 1000);
-// let client2 = new Client(2, "Yurii", "Biliy", "mail", +3809821221, 200);
-// let client3 = new Client(3, "Yurii", "Biliy", "mail", +3809821221, 100);
-// let client4 = new Client(4, "Yurii", "Biliy", "mail", +3809821221, 700);
-// let client5 = new Client(5, "Yurii", "Biliy", "mail", +3809821221, 400);
-// let client6 = new Client(6, "Yurii", "Biliy", "mail", +3809821221, 500);
-// let client7 = new Client(7, "Yurii", "Biliy", "mail", +3809821221, 150);
+// let arr = [
+//     new Client(1, "Yurii", "Biliy", "mail", +3809821221, 1000),
+//     new Client(2, "Yurii", "Biliy", "mail", +3809821221, 200),
+//     new Client(3, "Yurii", "Biliy", "mail", +3809821221, 100),
+//     new Client(4, "Yurii", "Biliy", "mail", +3809821221, 7),
+//     new Client(5, "Yurii", "Biliy", "mail", +3809821221, 400),
+//     new Client(6, "Yurii", "Biliy", "mail", +3809821221, 500),
+//     new Client(7, "Yurii", "Biliy", "mail", +3809821221, 150),
+// ];
 
 // let sortClients = clients.sort((a, b) => {
 //     return a.order - b.order
@@ -203,3 +214,4 @@
 // car1.increaseMaxSpeed(20);
 // car1.changeYear(2020);
 // car1.addDriver({ name: "Den", age: 24 })
+
