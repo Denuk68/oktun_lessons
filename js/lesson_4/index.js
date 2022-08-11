@@ -227,43 +227,106 @@
 //     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 // ==============================================
 
-class Car {
-    constructor(model, maker, year, maxSpeed, engine) {
-        this.model = model;
-        this.maker = maker;
-        this.year = year;
-        this.maxSpeed = maxSpeed;
-        this.engine = engine;
+// class Car {
+//     constructor(model, maker, year, maxSpeed, engine) {
+//         this.model = model;
+//         this.maker = maker;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engine = engine;
 
-        this.drive = function () {
-            console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
-        };
+//         this.drive = function () {
+//             console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//         };
 
-        this.info = function () {
-            return console.log(`Виробник: ${this.maker}, модель: ${this.model}, рік випсуку:  ${this.year}, максимальна швидкість: ${this.maxSpeed}, об'єм: ${this.engine} `);
-        };
+//         this.info = function () {
+//             return console.log(`Виробник: ${this.maker}, модель: ${this.model}, рік випсуку:  ${this.year}, максимальна швидкість: ${this.maxSpeed}, об'єм: ${this.engine} `);
+//         };
 
-        this.increaseMaxSpeed = function (newSpeed) {
-            this.maxSpeed += newSpeed;
-            console.log(`Нова максимальна швидкість: ${this.maxSpeed}`);
-        };
+//         this.increaseMaxSpeed = function (newSpeed) {
+//             this.maxSpeed += newSpeed;
+//             console.log(`Нова максимальна швидкість: ${this.maxSpeed}`);
+//         };
 
-        this.changeYear = function (newYear) {
-            this.year = newYear;
-            console.log(`Новий рік випсуку:  ${this.year},`)
-        };
+//         this.changeYear = function (newYear) {
+//             this.year = newYear;
+//             console.log(`Новий рік випсуку:  ${this.year},`)
+//         };
 
-        this.addDriver = function (driver) {
-            this.driver = driver;
-            console.log(this)
-        }
-    }
+//         this.addDriver = function (driver) {
+//             this.driver = driver;
+//             console.log(this)
+//         }
+//     }
 
+// };
+
+// let car1 = new Car("Model X", "Tesla", 2015, 250, 2.0);
+// car1.drive();
+// car1.info();
+// car1.increaseMaxSpeed(100);
+// car1.changeYear(2018);
+// car1.addDriver({ name: "Den", age: 24 });
+
+
+
+// ==============================================
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// ==============================================
+
+let popelushki = [];
+function Popelushka(name, age, footSize) {
+    this.name = name;
+    this.age = age;
+    this.footSize = footSize;
+
+    popelushki.push(this);
 };
 
-let car1 = new Car("Model X", "Tesla", 2015, 250, 2.0);
-car1.drive();
-car1.info();
-car1.increaseMaxSpeed(100);
-car1.changeYear(2018);
-car1.addDriver({ name: "Den", age: 24 });
+let prince = [];
+function Prince(name, age, footSize) {
+    this.name = name;
+    this.age = age;
+    this.footSize = footSize;
+
+    prince.push(this);
+};
+
+let dataPopelushki = [
+    new Popelushka('Popelushka1', 21, 10),
+    new Popelushka('Popelushka2', 22, 3),
+    new Popelushka('Popelushka3', 23, 2),
+    new Popelushka('Popelushka4', 24, 1),
+    new Popelushka('Popelushka5', 25, 4),
+    new Popelushka('Popelushka6', 26, 5),
+    new Popelushka('Popelushka7', 27, 6),
+    new Popelushka('Popelushka8', 28, 7),
+    new Popelushka('Popelushka9', 29, 8),
+    new Popelushka('Popelushka10', 30, 9)
+];
+let dataPrince = [
+    new Prince('Prince1', 25, 1),
+    new Prince('Prince2', 24, 2),
+    new Prince('Prince3', 23, 3),
+    new Prince('Prince4', 24, 4),
+    new Prince('Prince5', 25, 5),
+    new Prince('Prince6', 26, 6),
+    new Prince('Prince7', 27, 7),
+    new Prince('Prince8', 28, 8),
+    new Prince('Prince9', 29, 9),
+    new Prince('Prince10', 30, 10)
+];
+
+console.log(popelushki);
+console.log(prince);
+
+for (let girl of popelushki) {
+    for (let boy of prince) {
+        if (girl.footSize === boy.footSize) {
+            console.log(`Попелюшка ${girl.name} повинна бути з ${boy.name}`)
+        }
+    }
+};
