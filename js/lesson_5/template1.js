@@ -14,43 +14,43 @@
 //     -- поміняти колір тексту у всіх елементів fc_rules на зелений
 // ===============================================
 
-// let content = document.getElementById("content");
-// console.log(content.innerText);
+let content = document.getElementById("content");
+console.log(content.innerText);
 
-// let rules = document.getElementById("rules");
-// console.log(rules.innerText);
+let rules = document.getElementById("rules");
+console.log(rules.innerText);
 
-// content.innerText = "Новий текст content";
-// rules.innerText = "Новий текст rules";
+content.innerText = "Новий текст content";
+rules.innerText = "Новий текст rules";
 
-// content.classList.add("red", "blue");
-// rules.classList.add("red", "blue");
+content.classList.add("red", "blue");
+rules.classList.add("red", "blue");
 
-// console.log(rules.classList);
+console.log(rules.classList);
 
-// let fc_rules = document.getElementsByClassName("fc_rules");
-// console.log(fc_rules);
+let fc_rules = document.getElementsByClassName("fc_rules");
+console.log(fc_rules);
 
-// for (let i of fc_rules) {
-//     i.addEventListener("click", function () {
-//         i.classList.add("red", "blue");
-//     })
-// };
+for (let i of fc_rules) {
+    i.addEventListener("click", function () {
+        i.classList.add("red", "blue");
+    })
+};
 
-// let div = document.createElement("div");
-// let ul = document.getElementsByTagName('ul');
-// let ul_0 = ul[0];
+let div = document.createElement("div");
+let ul = document.getElementsByTagName('ul');
+let ul_0 = ul[0];
 
-// ul_0.after(div)
-// for (let i of fc_rules) {
-//     i.addEventListener("click", function () {
-//         let p = document.createElement("p");
-//         div.appendChild(p);
-//         p.innerText = i.innerText;
-//         p.classList.add("blue");
-//     });
-// };
+ul_0.after(div)
+for (let i of fc_rules) {
+    i.addEventListener("click", function () {
+        let p = document.createElement("p");
+        div.appendChild(p);
+        p.innerText = i.innerText;
+        p.classList.add("blue");
+    });
+};
 
-// for (let i of fc_rules) {
-//     i.classList.add("green");
-// };
+for (let i of fc_rules) {
+    i.classList.add("green");
+};
