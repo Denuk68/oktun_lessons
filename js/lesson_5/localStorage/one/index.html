@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  - Створити форму з інпутом для введення ім'я, та action="index2.html".     відп равціданних з форми, зберігати ім'я в localstorage, та переходити на index2.html.
+     index2.html виводити записане в localstorage ім'я в div -->
+
+    <script>
+        let body = document.getElementsByTagName("body");
+        let form = document.createElement("form");
+        form.name = "createName";
+        form.action = "index2.html";
+        let input = document.createElement("input");
+        input.type = "name";
+        input.name = "name";
+        let button = document.createElement("button");
+        button.type = "submit";
+        button.name = "submit";
+        button.innerText = "Відправити"
+
+        document.body.prepend(form);
+        form.append(input, button);
+
+        button.onclick = function () {           
+            localStorage.setItem("users", input.value)
+        };
+
+    </script>
+</body>
+
+</html>
