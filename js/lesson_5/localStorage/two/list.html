@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="./list.css">
+</head>
+
+<body>
+
+    <script>
+        let cart = localStorage.getItem("cart");
+        let products = JSON.parse(cart);
+
+        let ul = document.createElement("ul");
+        document.body.prepend(ul);
+        ul.classList.add("products_list")
+
+
+        if (products === null) {
+            let h1 = document.createElement("h1");
+            h1 = "Корзина порожня";
+            document.body.prepend(h1);
+        }
+        else {
+            for (let item of products) {
+                let li = document.createElement("li");
+                ul.appendChild(li);
+                let h3 = document.createElement("h3");
+                li.appendChild(h3);
+                h3.innerText = item.name;
+                let span = document.createElement("span");
+                li.appendChild(span);
+                span.innerText = ("Amount: " + item.price + " Price: " + item.price + " Грн");
+                let img = document.createElement("img");
+                img.src = item.image;
+                li.appendChild(img);
+                let deleteProduct = document.createElement("input");
+                deleteProduct.value = "Видалити товар";
+                deleteProduct.type = "button";
+                deleteProduct.style.width = '200px'
+                img.after(deleteProduct);
+
+
+                deleteProduct.addEventListener("click", function () {
+                    location.reload();
+                    let index = products.indexOf(item);
+                    products.splice(index, 1);
+                    localStorage.clear();
+                    localStorage.setItem("cart", JSON.stringify(products));
+                })
+            }
+        }
+
+
+        let btnClear = document.createElement("input");
+        btnClear.value = "Почистити корзину";
+        btnClear.type = "button";
+        ul.after(btnClear);
+
+        btnClear.addEventListener("click", function () {
+            location.reload();
+            localStorage.clear()
+        })
+
+
+    </script>
+</body>
+
+</html>

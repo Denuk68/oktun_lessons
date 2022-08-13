@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!-- - Імітуємо наповнення інтернет магазину товарами :
+    Створити форму з наступними полями :
+    - назва товару
+    - кількість товару
+    - ціна товару
+    - картинка товару (посилання з інтернету)
+    Зберігати товари в масив в локалсорадж. При збережені товару з форми, action не повинно відбуватись.
+    створити елемент <a href='list.html'> На сторінку товарів</a>, та list.html, при переході на який відобразити на
+    сторінці всі товари.
+    На сторінці list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.
+    До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний товар -->
+
+    <form name="product" class="product">
+
+        <label for="name">Product</label>
+        <input type="text" name="name" value="Apple">
+
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" value="1">
+
+        <label for="price">Price</label>
+        <input type="number" name="price" value="12">
+
+        <label for="image">Image</label>
+        <input type="url" name="image"
+            value="https://static.wikia.nocookie.net/5e6c383a-4f2c-4ddb-b1c2-a1d216f53ed8/scale-to-width/755">
+
+        <input type="submit" value="Відправити" class="button">
+
+        <a href='list.html'>Страница товаров</a>
+
+    </form>
+
+    <script>
+        let form = document.forms.product;
+        let button = document.querySelector("input.button");
+
+        let cart = localStorage.getItem("cart");
+        let parse = JSON.parse(cart);
+        let products  = parse || [];
+
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            let product = {
+                name: form.name.value,
+                amount: form.amount.value,
+                price: form.price.value,
+                image: form.image.value
+            };
+            products.push(product);
+            localStorage.setItem("cart", JSON.stringify(products))
+        });
+
+    </script>
+</body>
+
+</html>

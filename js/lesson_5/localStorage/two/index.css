@@ -1,0 +1,9 @@
+form.product{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+};
+form.product  label{
+    margin-top: 20px;
+};
+

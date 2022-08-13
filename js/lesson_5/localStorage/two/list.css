@@ -1,0 +1,7 @@
+.products_list li {
+    display: flex;
+    flex-direction: column;
+}
+.products_list img{
+    width: 200px;
+}
