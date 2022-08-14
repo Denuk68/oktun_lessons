@@ -433,3 +433,35 @@
 // let div = new InfoTeg("div", "Елемент <div> є блоковим елементом і призначений для виділення фрагмента документа з метою зміни виду вмісту.", "title", "Вказує додаткову текстову підказку");
 
 // console.log(div)
+
+
+
+// ==============================================
+// Класи ,  та наслідування.
+
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     sayHi() {
+//         return console.log(this.name)
+
+//     }
+// }
+// let user1 = new User("Den");
+// user1.sayHi();
+
+
+// class SuperUser extends User {
+//     constructor(name, age) {
+//         super(name);
+//         this.age = age;
+//     }
+//     sayHi() {
+//         return console.log(this.name + " " + this.age)
+//     }
+// }
+
+// let user2 = new SuperUser("Den2", 23)
+// user2.sayHi()
