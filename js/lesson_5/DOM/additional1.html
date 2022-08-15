@@ -92,7 +92,14 @@
         for (let user of users) {
             let li = document.createElement("li");
             ul.prepend(li);
-            li.append(`Name: ${user.name} Age: ${user.age} Status: ${user.status} City: ${user.address.city} Country: ${user.address.country} Street: ${user.address.street} houseNumber: ${user.address.houseNumber}`)
+            li.innerHTML = `
+            Name: ${user.name} <br>
+            Age: ${user.age} <br>
+            Status: ${user.status} <br>
+            City: ${user.address.city}<br>
+            Country: ${user.address.country} <br>
+            Street: ${user.address.street}<br>
+            houseNumber: ${user.address.houseNumber}`
         }
 
 
