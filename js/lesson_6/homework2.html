@@ -10,21 +10,23 @@
 
 <body>
     <!-- Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
-    https://jsonplaceholder.typicode.com/posts -->
+    https://jsonplaceholder.typicode.com/comments -->
+    <div class="content">
+
+    </div>
 
     <script>
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch("https://jsonplaceholder.typicode.com/comments")
             .then(value => value.json())
             .then(value => {
-                let postsWrap = document.createElement("div");
-                document.body.append(postsWrap);
-                for (const post of value) {
+                let content = document.body.getElementsByClassName("content")[0];
+                for (let item of value) {
                     let div = document.createElement("div");
-                    div.innerHTML = "UserID: " + post.userId + "<br>" + " Title: " + post.title;
-                    postsWrap.append(div);
+                    div.innerHTML = "postId: " + item.postId + "<br>" + " name: " + item.name;
+                    content.append(div);
                 }
-            })
-
+            }
+            )
     </script>
 </body>
 
