@@ -38,6 +38,7 @@ https://jsonplaceholder.typicode.com/users
                     divUser.append(btnPost);
                     divUser.style.padding = "20px 0";
 
+
                     btnPost.onclick = () => {
                         fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
                             .then(value => value.json())
@@ -46,12 +47,32 @@ https://jsonplaceholder.typicode.com/users
                                 postsBox.innerHTML = "";
                                 for (let post of posts) {
                                     let postDiv = document.createElement("div");
+                                    postDiv.classList.add("postDiv")
                                     postDiv.innerHTML = post.title + "<br>";
+                                    postDiv.style.backgroundColor = "grey";
+                                    postDiv.style.margin = "10px 0";
                                     let btnComments = document.createElement("button");
                                     btnComments.innerText = "Comment click";
                                     btnComments.style.margin = "10px 0";
                                     postDiv.append(btnComments);
                                     postsBox.append(postDiv)
+
+                                    let commentsBox = document.createElement("div");
+                                    commentsBox.classList.add("commentsBox");
+                                    btnComments.onclick = () => {
+                                        fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
+                                            .then(value => value.json())
+                                            .then(comments => {
+                                                commentsBox.innerHTML = "";
+                                                for (let comment of comments) {
+                                                    let commentDiv = document.createElement("div");
+                                                    commentDiv.innerHTML = comment.name + "<br>";
+                                                    commentDiv.style.backgroundColor = "pink";
+                                                    postDiv.append(commentsBox);
+                                                    commentsBox.append(commentDiv);
+                                                }
+                                            })
+                                    }
                                 }
                             })
                     }
