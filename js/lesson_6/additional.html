@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+
+    </div>
+    <div class="posts">
+
+    </div>
+    <!-- 1.
+Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
+https://jsonplaceholder.typicode.com/users
+кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.
+Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста -->
+
+
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(value => value.json())
+            .then(value => {
+
+                let wrap = document.body.getElementsByClassName("wrap")[0];
+
+                for (let user of value) {
+                    let divUser = document.createElement("div");
+                    divUser.innerHTML = user.id + " " + user.name + "<br>";
+                    wrap.appendChild(divUser);
+                    let btnPost = document.createElement("button");
+                    btnPost.innerText = "Post click";
+                    divUser.append(btnPost);
+                    divUser.style.padding = "20px 0";
+
+                    btnPost.onclick = () => {
+                        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+                            .then(value => value.json())
+                            .then(posts => {
+                                let postsBox = document.body.getElementsByClassName("posts")[0];
+                                postsBox.innerHTML = "";
+                                for (let post of posts) {
+                                    let postDiv = document.createElement("div");
+                                    postDiv.innerHTML = post.title + "<br>";
+                                    let btnComments = document.createElement("button");
+                                    btnComments.innerText = "Comment click";
+                                    btnComments.style.margin = "10px 0";
+                                    postDiv.append(btnComments);
+                                    postsBox.append(postDiv)
+                                }
+                            })
+                    }
+
+
+                }
+            })
+
+    </script>
+</body>
+
+</html>
